@@ -1,4 +1,4 @@
-let stockList = ["FB","AAPL","TSLA","GOOG"];
+let stockList = ["XOM","T","AAL","TROW","BBY"];
 let validationList = [];
 
 let getListedSecurities = function () {
@@ -17,24 +17,28 @@ let getListedSecurities = function () {
 
 let displayStockInfo = function () {
     let stock = $(this).attr("symbol");
-    let queryURL = `https://api.iextrading.com/1.0/stock/${stock}/batch?types=quote,news&range=1m&last=3`;
+    let queryURL = `https://api.iextrading.com/1.0/stock/${stock}/batch?types=logo,quote,news&range=1m&last=3`;
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function(response) {
         let stockRow = $("<tr>").addClass("stock");
+        let logo = $("<td>").html(`<img src="${response.logo.url}">`);
+        logo.addClass("logo");
         let name = $("<td>").text(response.quote.companyName);
+        name.addClass("center");
         let symbol = $("<td>").text(response.quote.symbol);
+        symbol.addClass("center");
         let price = $("<td>").text(response.quote.latestPrice);
+        price.addClass("center");
         let news = $("<td>");
         for (j = 0; j < 3; j++) {
-            let story = `<a href="${response.news[j].url}">${response.news[j].headline}</a>`;
-            news.append(story);
-            if (j < 2) {
-                news.append("<br>");
+            if (response.news.length > j) {
+                let story = `<li><a href="${response.news[j].url}">${response.news[j].headline}</a></li>`;
+                news.append(story);
             }
         }
-        stockRow.append(name,symbol,price,news);
+        stockRow.append(logo,name,symbol,price,news);
         $("#stockInfo").prepend(stockRow);
     })
 }

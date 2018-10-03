@@ -1,5 +1,6 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
 }
 
 button, form, input {
@@ -7,13 +8,12 @@ button, form, input {
 }
 
 h1 {
-    background-color: black;
+    background-color: navy;
     width: calc(100% - 4px);
-    color: white;
-    padding: 10px;
+    color: whitesmoke;
+    padding: 30px 10px;
     margin: -8px;
     text-align: center;
-    border-bottom: solid 5px gold;
 }
 
 #stockButtons {
@@ -21,8 +21,8 @@ h1 {
 }
 
 #stockButtons button {
-    background-color: gold;
-    color: black;
+    background-color: navy;
+    color: whitesmoke;
     border: solid 2px black;
     font-weight: bold;
     font-size: 16px;
@@ -33,9 +33,9 @@ h1 {
 }
 
 #addStock {
-    background-color: black;
-    color: white;
-    border: solid 2px gold;
+    background-color: navy;
+    color: whitesmoke;
+    border: solid 2px black;
     font-weight: bold;
     font-size: 16px;
     border-radius: 8px;
@@ -48,4 +48,27 @@ h1 {
 
 table, th, td {
     border: solid 3px black;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 2px;
+    background-color: navy;
+    color: whitesmoke;
+}
+
+.logo img {
+    margin: -1px -1px -5px;
+}
+
+.center {
+    text-align: center;
+}
+
+li {
+    padding: 10px;
+}
+
+input {
+    font-size: 16px;
 }
