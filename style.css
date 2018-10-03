@@ -1,3 +1,51 @@
-button, div, form, input {
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button, form, input {
     margin: 10px;
+}
+
+h1 {
+    background-color: black;
+    width: calc(100% - 4px);
+    color: white;
+    padding: 10px;
+    margin: -8px;
+    text-align: center;
+    border-bottom: solid 5px gold;
+}
+
+#stockButtons {
+    margin-top: 15px;
+}
+
+#stockButtons button {
+    background-color: gold;
+    color: black;
+    border: solid 2px black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#stockButtons button:focus {
+    outline: none;
+}
+
+#addStock {
+    background-color: black;
+    color: white;
+    border: solid 2px gold;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+#addStock:focus {
+    outline: none;
+}
+
+table, th, td {
+    border: solid 3px black;
 }

@@ -13,11 +13,23 @@
         <h1>Stock Search</h1>
         <div id="stockButtons"></div>
         <form id="stockForm">
-            <label for="stockInput">Add a Stock Symbol</label>
+            <label for="stockInput">Add a Stock Symbol:</label>
             <input type="text" id="stockInput"><br>
             <input id="addStock" type="submit" value="Add a Stock Symbol">
         </form>
-        <div id="stockInfo"></div>
+        <table>
+            <thead>
+            <tr>
+                <th>Company Name</th>
+                <th>Stock Symbol</th>
+                <th>Stock Price</th>
+                <th>News Headline</th>
+            </tr>
+            </thead>
+            <tbody id="stockInfo">
+
+            </tbody>
+        </table>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
