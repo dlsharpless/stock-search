@@ -1,4 +1,4 @@
-let stockList = ["XOM","T","AAL","TROW","BBY"];
+let stockList = ["XOM","T","AAL","TROW","CAT","BBY"];
 let validationList = [];
 
 let getListedSecurities = function () {
